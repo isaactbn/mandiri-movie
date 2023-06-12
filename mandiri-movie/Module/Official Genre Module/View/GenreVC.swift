@@ -77,10 +77,10 @@ extension GenreVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.viewWrapper.tapGesture{ [self] in
             let id = genres?[indexPath.row].id.codingKey.stringValue ?? ""
-//            let movieRouter = MovieRouters.start(id: id, navTitle: genres?[indexPath.row].name ?? "")
-//            let vc = movieRouter.entry
-//
-//            pushVC(vc as? MovieViewVC ?? BaseVC())
+            let movieRouter = MovieRouters.start(id: id, navTitle: genres?[indexPath.row].name ?? "")
+            let vc = movieRouter.entry
+
+            pushVC(vc as? MovieViewVC ?? BaseVC())
             print("berhasil klik")
         }
         
