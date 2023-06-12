@@ -122,11 +122,11 @@ extension MovieViewVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.descLabel.text = movies?[indexPath.row].release_date
         
         cell.viewWrapper.tapGesture{
-//            let id = self.movies?[indexPath.row].id.codingKey.stringValue ?? ""
-//            let movieRouter = MovieDetailRouters.start(id: id, navTitle: self.movies?[indexPath.row].title ?? "")
-//            let vc = movieRouter.entry
-//
-//            self.pushVC(vc as? MovieDetailVC ?? BaseVC())
+            let id = self.movies?[indexPath.row].id.codingKey.stringValue ?? ""
+            let movieRouter = MovieDetailRouters.start(id: id, navTitle: self.movies?[indexPath.row].title ?? "")
+            let vc = movieRouter.entry
+
+            self.pushVC(vc as? MovieDetailVC ?? BaseVC())
         }
         
         return cell

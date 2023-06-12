@@ -81,7 +81,6 @@ extension GenreVC: UICollectionViewDelegate, UICollectionViewDataSource {
             let vc = movieRouter.entry
 
             pushVC(vc as? MovieViewVC ?? BaseVC())
-            print("berhasil klik")
         }
         
         return cell

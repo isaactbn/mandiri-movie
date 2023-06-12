@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TrailerCell" customModule="mandiri_movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="316"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="316"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-d4-eVM" userLabel="Trailer View">
+                        <rect key="frame" x="8" y="8" width="366" height="300"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official Trailer 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaz-22-rLh" userLabel="Official Trailer 1">
+                                <rect key="frame" x="8" y="8" width="350" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJY-5w-n4y">
+                                <rect key="frame" x="8" y="52" width="350" height="240"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="pQ4-Xc-QaT"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kJY-5w-n4y" firstAttribute="leading" secondItem="lzj-d4-eVM" secondAttribute="leading" constant="8" id="4hY-EH-JZc"/>
+                            <constraint firstItem="Oaz-22-rLh" firstAttribute="top" secondItem="lzj-d4-eVM" secondAttribute="top" constant="8" id="P1a-bn-P5A"/>
+                            <constraint firstItem="kJY-5w-n4y" firstAttribute="top" secondItem="Oaz-22-rLh" secondAttribute="bottom" constant="16" id="RO8-5t-4JN"/>
+                            <constraint firstAttribute="trailing" secondItem="Oaz-22-rLh" secondAttribute="trailing" constant="8" id="TdM-qR-fSx"/>
+                            <constraint firstAttribute="bottom" secondItem="kJY-5w-n4y" secondAttribute="bottom" constant="8" id="VMm-Ib-Tad"/>
+                            <constraint firstAttribute="trailing" secondItem="kJY-5w-n4y" secondAttribute="trailing" constant="8" id="XLY-pF-yWZ"/>
+                            <constraint firstItem="Oaz-22-rLh" firstAttribute="leading" secondItem="lzj-d4-eVM" secondAttribute="leading" constant="8" id="YqT-7O-PJ0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="lzj-d4-eVM" secondAttribute="trailing" constant="8" id="3fh-Qk-kRc"/>
+                    <constraint firstAttribute="bottom" secondItem="lzj-d4-eVM" secondAttribute="bottom" constant="8" id="M9w-ZB-Iel"/>
+                    <constraint firstItem="lzj-d4-eVM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="roa-JE-8iO"/>
+                    <constraint firstItem="lzj-d4-eVM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="scl-69-S5U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="nameLabel" destination="Oaz-22-rLh" id="NgA-6t-PFU"/>
+                <outlet property="trailerWebview" destination="kJY-5w-n4y" id="XWC-az-X3f"/>
+            </connections>
+            <point key="canvasLocation" x="53" y="21"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
